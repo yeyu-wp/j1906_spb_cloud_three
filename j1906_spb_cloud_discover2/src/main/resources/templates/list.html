@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+
+<table>
+    <tr>
+        <td>序号</td>
+        <td>部门</td>
+        <td>地址</td>
+    </tr>
+    <tr th:each="dept,status:${dept}">
+        <th th:text="${status.index + 1}"></th>
+        <th th:text="${dept.getDeptno()}"></th>
+        <th th:text="${dept.getDname()}"></th>
+        <th th:text="${dept.getLoc()}"></th>
+    </tr>
+</table>
+
+</body>
+</html>
